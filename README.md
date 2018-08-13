@@ -6,16 +6,20 @@ This is a simple memory game also known as concentration developed with HTML, CS
 
 * [Instructions](#instructions)
 * [Contributing](#contributing)
+* [Link](#link)
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+Memory Game Or Concentration is a simple memory game which you select two corresponding images, if each selected pair matches, the card stays open, else it closes.
 
-To get started, open `js/app.js` and start building out the app's functionality
+Game Ends when all the selected cards matches.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
+For specific, detailed instructions, look at the project instructions in the [Click Here To Play Memory Game](#link).
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).# Memory Game Project.
+
+## Link
+
+To Play the Memory Game [Click Link To Play](https://github.io/MaestroJolly/memory-game)
