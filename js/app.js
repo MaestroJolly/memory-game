@@ -218,6 +218,7 @@ function restartGame() {
 
 for (restart of restarts) {
     restart.addEventListener('click', function () {
+        resetTime();
         restartGame();
         let toggleModal = document.querySelector(".modal-background");
         toggleModal.style.display = "none";

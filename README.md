@@ -22,4 +22,4 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).# Memory Game Project.
 
 ## Link
 
-To Play the Memory Game [Click Link To Play](https://github.io/MaestroJolly/memory-game)
+To Play the Memory Game [Click Link To Play](https://maestrojolly.github.io/memory-game/)
