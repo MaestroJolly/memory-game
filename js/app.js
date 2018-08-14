@@ -3,7 +3,8 @@
  */
 
 const deck = document.querySelector(".deck");
-let restarts = document.querySelectorAll(".restart");
+const restart = document.querySelector(".restart");
+const reload = document.querySelector(".reload");
 let openLists = [];
 let matchedCard = 0;
 let offClock = true;
@@ -18,14 +19,15 @@ let moves = 0;
 let cards = ["fa fa-facebook", "fa fa-medium", "fa fa-github", "fa fa-twitter", "fa fa-instagram", "fa fa-github", "fa fa-stack-overflow", "fa fa-google-plus",
     "fa fa-facebook", "fa fa-slack", "fa fa-stack-overflow", "fa fa-slack", "fa fa-twitter", "fa fa-google-plus", "fa fa-medium", "fa fa-instagram"];
 
-let shuffledCards = shuffle(cards);
+// let shuffledCards = shuffle(cards);
 
 //  function that shuffle cards and builds the cards on the deck
 
-function theShuffledCards(cardsShuffle){
-    for (cardShuffle of cardsShuffle) {
+function theShuffledCards(){
+    const shuffledCards = shuffle(cards);
+    for (shuffledCard of shuffledCards) {
         const cardIcons = document.createElement('i');
-        cardIcons.setAttribute("class", cardShuffle);
+        cardIcons.setAttribute("class", shuffledCard);
         const cardList = document.createElement('li');
         cardList.appendChild(cardIcons);
         cardList.setAttribute("class", "card");
@@ -33,7 +35,7 @@ function theShuffledCards(cardsShuffle){
     }
 }
 
-theShuffledCards(shuffledCards);
+theShuffledCards();
 
 
 let selectedCards = document.querySelectorAll(".card");
@@ -186,14 +188,23 @@ function resetTime() {
     displayClock();
 }
 
-//  function that restarts game
+// function to reset game
 
-function restartGame() {
+
+function resetGame(){
+    resetTime();
     setDefaultMoves();
     setDefaultStars();
     deck.innerHTML = "";
-    let shuffledCards = shuffle(cards);
-    theShuffledCards(shuffledCards);
+    openLists = [];
+    theShuffledCards();
+
+}
+
+//  function that restarts game
+
+function restartGame() {
+    resetGame();
     let selectedCards = document.querySelectorAll(".card");
     for (selectedCard of selectedCards) {
         selectedCard.addEventListener("click", function () {
@@ -214,16 +225,18 @@ function restartGame() {
     }
 }
 
-//  Event Listener that restarts Game
+//  Event Listener that resets Game
 
-for (restart of restarts) {
-    restart.addEventListener('click', function () {
-        resetTime();
-        restartGame();
-        let toggleModal = document.querySelector(".modal-background");
-        toggleModal.style.display = "none";
-    });
-}
+restart.addEventListener("click", function () {
+    restartGame();
+});
+
+//  Event Listener that reload Game
+
+reload.addEventListener("click", function () {
+    restartGame();
+    toggleModal();
+});
 
 // function that determines the remaining stars
 
