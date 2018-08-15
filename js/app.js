@@ -63,7 +63,7 @@ function isSelectionTrue(cardStatus) {
 
 //  function that checks whether the opened cards match
 
-function cardMatch(match){
+function cardMatch(){
     if (openLists[0].firstElementChild.className === openLists[1].firstElementChild.className){
         openLists[0].classList.toggle('match');
         openLists[1].classList.toggle('match');
@@ -72,6 +72,7 @@ function cardMatch(match){
         const totalCardPairs = 8;
         if (matchedCard === totalCardPairs){
             endGame();
+            toggleModal();
         }
     }else{
         setTimeout(function (){
@@ -140,7 +141,7 @@ for (selectedCard of selectedCards){
             openCard(this);
             openCardList(this);
             if (openLists.length === 2){
-                cardMatch(this);
+                cardMatch();
                 displayMoves();
                 checkScore();
             }
@@ -216,7 +217,7 @@ function restartGame() {
                 openCard(this);
                 openCardList(this);
                 if (openLists.length === 2) {
-                    cardMatch(this);
+                    cardMatch();
                     displayMoves();
                     checkScore();
                 }
@@ -234,8 +235,11 @@ restart.addEventListener("click", function () {
 //  Event Listener that reload Game
 
 reload.addEventListener("click", function () {
-    restartGame();
     toggleModal();
+    restartGame();
+    // const hideBackground = document.querySelector(".modal-background");
+    // hideBackground.style.display = "none";
+
 });
 
 // function that determines the remaining stars
@@ -295,8 +299,7 @@ for (closeModal of closeModals){
 function endGame(){
     setTimeout(function (){
     displayModalResult();
-    toggleModal();
-    resetTime();
+    stopWatch();
     }, 500);
 }
 

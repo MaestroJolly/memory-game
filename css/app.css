@@ -258,7 +258,6 @@ h1 {
     display: flex;
     padding: 3rem;
     width: 100%;
-    margin: 0 auto;
 }
 
 .close-position {
@@ -321,6 +320,43 @@ hr {
         font-size: 42px;
     }
 
+    .game-result-title {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .game-time {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .game-stars {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .game-moves {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .close-position {
+        display: flex;
+        cursor: pointer;
+        justify-content: flex-start;
+        align-content: flex-start;
+        margin-left: 120px;
+        width: 50%;
+    }
+    .reload {
+        display: flex;
+        cursor: pointer;
+        justify-content: flex-end;
+        align-content: flex-end;
+        margin-right: 120px;
+        width: 50%;
+    }
+
 
 }
 
@@ -368,5 +404,22 @@ hr {
         margin-bottom: 10px;
     }
 
- }
+
+    .close-position {
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-content: center;
+        margin-left: 150px;
+        width: 50%;
+    }
+    .reload {
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-content: center;
+        margin-right: 150px;
+        width: 50%;
+    } 
+}
 
