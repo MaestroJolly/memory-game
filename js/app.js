@@ -14,10 +14,13 @@ let closeModals = document.querySelectorAll(".close");
 
 let moves = 0;
 
-//  variable cards declared
+//  variable icons declared
 
-let cards = ["fa fa-facebook", "fa fa-medium", "fa fa-github", "fa fa-twitter", "fa fa-instagram", "fa fa-github", "fa fa-stack-overflow", "fa fa-google-plus",
-    "fa fa-facebook", "fa fa-slack", "fa fa-stack-overflow", "fa fa-slack", "fa fa-twitter", "fa fa-google-plus", "fa fa-medium", "fa fa-instagram"];
+let icons = ["fa fa-facebook", "fa fa-medium", "fa fa-github", "fa fa-twitter", "fa fa-instagram", "fa fa-stack-overflow", "fa fa-google-plus", "fa fa-slack"]
+
+//  using spread parameters to join icons array twice into variable cards
+
+let cards = [...icons, ...icons];
 
 // let shuffledCards = shuffle(cards);
 
