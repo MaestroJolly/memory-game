@@ -196,6 +196,7 @@ function resetTime() {
 
 
 function resetGame(){
+    matchedCard = 0;
     resetTime();
     setDefaultMoves();
     setDefaultStars();
@@ -305,8 +306,6 @@ function endGame(){
     stopWatch();
     }, 500);
 }
-
-
 
 
 
