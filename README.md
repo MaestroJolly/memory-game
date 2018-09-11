@@ -5,7 +5,7 @@ This is a simple memory game also known as concentration developed with HTML, CS
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [How To Play](#how to play) 
+* [How To Play](#how_to_play) 
 * [Contributing](#contributing) 
 * [Link](#link)
 
